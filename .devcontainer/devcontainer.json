@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "Debian",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.fontFamily": "'Hack Nerd Font Mono', monospace",
+                "editor.fontFamily": "'Hack Nerd Font Mono', Consolas, 'Courier New', monospace",
+                "dotfiles.repository": "deep-space-cartel/dotfiles",
+                // "dotfiles.targetPath": "~/dotfiles",
+                // "dotfiles.installCommand": "bootstrap.sh --force",
+                // [11747 ms] Setting current directory to ~/dotfiles
+                // Could not locate ~/dotfiles/bootstrap.sh...
+            },
+            "extensions": [
+                "mads-hartmann.bash-ide-vscode",
+                "yzhang.markdown-all-in-one",
+                "DavidAnson.vscode-markdownlint",
+                "streetsidesoftware.code-spell-checker"
+            ]
+        }
+    }
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
